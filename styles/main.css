@@ -149,6 +149,12 @@ the same result with same amount of code lines?
 .title {
     font: 1.5rem/150% 'Figtree-Bold', sans-serif;
     margin-bottom: var(--alt-margin);
+    transition: all .1s linear;
+
+    &:hover {
+        cursor: pointer;
+        color: var(--main-color);
+    }
 }
 
 .description {
@@ -165,4 +171,10 @@ the same result with same amount of code lines?
 
 .avatar {
     margin-right: var(--alt-margin);
+}
+
+@media only screen and (min-width: 23.4375rem) and (max-width: 90rem) {
+    .card {
+        width: 20.4375rem;
+    }
 }
