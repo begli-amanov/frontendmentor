@@ -81,11 +81,6 @@ h6 {
 }
 
 @font-face {
-    font-family: 'Figtree-Bold';
-    src: url('../assets/fonts/static/Figtree-SemiBold.ttf');
-}
-
-@font-face {
     font-family: 'Figtree-Variable';
     src: url('../assets/fonts/Figtree-VariableFont_wght.ttf');
 }
@@ -150,7 +145,7 @@ the same result with same amount of code lines?
 }
 
 .publish-date {
-    font: calc(.707rem + .187vw) / 150% 'Figtree-Bold', sans-serif;
+    font: 500 calc(.707rem + .187vw) / 150% 'Figtree-Medium', sans-serif;
     margin-bottom: var(--alt-margin);
 }
 
@@ -172,6 +167,7 @@ the same result with same amount of code lines?
 }
 
 /* is this one faster as adding hover effect on each class separately? */
+
 .category,
 .title,
 .author {
@@ -184,6 +180,8 @@ the same result with same amount of code lines?
 .avatar {
     margin-right: var(--alt-margin);
 }
+
+/* media queries start */
 
 @media only screen and (min-width: 23.4375rem) and (max-width: 67.5rem) {
 
