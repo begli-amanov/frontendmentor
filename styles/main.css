@@ -1,3 +1,7 @@
+/* ==========================================================================
+   Modern CSS reset by Josh Comeau: https://www.joshwcomeau.com/css/custom-css-reset/
+========================================================================== */
+
 /*
   1. Use a more-intuitive box-sizing model.
 */
@@ -70,14 +74,20 @@ h6 {
 /* ==========================================================================
    Hosted Fonts
 ========================================================================== */
+
 @font-face {
-    font-family: 'Figtree-Bold';
+    font-family: 'Figtree-ExtraBold';
     src: url('../assets/fonts/static/Figtree-ExtraBold.ttf');
 }
 
 @font-face {
-    font-family: 'Figtree-Medium';
+    font-family: 'Figtree-Bold';
     src: url('../assets/fonts/static/Figtree-SemiBold.ttf');
+}
+
+@font-face {
+    font-family: 'Figtree-Variable';
+    src: url('../assets/fonts/Figtree-VariableFont_wght.ttf');
 }
 
 /* ==========================================================================
@@ -92,13 +102,9 @@ h6 {
     --main-padding: 1.5rem;
     --main-margin: 1.5rem;
     --alt-margin: .75rem;
-
     --main-text-color: #111;
     --paragraph-text-color: #6b6b6b;
     --white: #fff;
-
-    --text-preset-3-bold: .875rem/150% 'Figtree-Bold', sans-serif;
-
 
     background-color: var(--main-color);
     height: 100vh;
@@ -108,7 +114,7 @@ h6 {
 }
 
 /* So I am interested in 2 points.
-1. Is it possible to shrink the paragraph without adding fixed with 
+1. Is it possible to shrink the paragraph without adding fixed width to its parent?
 2. Could I use span instead of div on "category" class and still get
 the same result with same amount of code lines?
 */
@@ -134,31 +140,27 @@ the same result with same amount of code lines?
     border-radius: .25rem;
     background-color: var(--main-color);
     padding: .25rem .75rem;
-
-    /* text preset 3 (bold) */
-    font: var(--text-preset-3-bold);
+    font: calc(.707rem + .187vw) / 150% 'Figtree-ExtraBold';
     color: var(--main-text-color);
     margin-bottom: var(--alt-margin);
+
+    &:hover {
+        background-color: var(--main-text-color);
+    }
 }
 
 .publish-date {
-    font: .875rem/150% 'Figtree-Medium', sans-serif;
+    font: calc(.707rem + .187vw) / 150% 'Figtree-Bold', sans-serif;
     margin-bottom: var(--alt-margin);
 }
 
 .title {
-    font: 1.5rem/150% 'Figtree-Bold', sans-serif;
+    font: calc(1.164rem + 0.375vw) / 150% 'Figtree-ExtraBold', sans-serif;
     margin-bottom: var(--alt-margin);
-    transition: all .1s linear;
-
-    &:hover {
-        cursor: pointer;
-        color: var(--main-color);
-    }
 }
 
 .description {
-    font: 1rem/150% 'Figtree-Medium', sans-serif;
+    font: 500 calc(.8313rem + .188vw) / 150% 'Figtree-Variable', sans-serif;
     color: var(--paragraph-text-color);
     margin-bottom: var(--main-margin);
 }
@@ -166,14 +168,25 @@ the same result with same amount of code lines?
 .author {
     display: flex;
     align-items: center;
-    font: var(--text-preset-3-bold);
+    font: .875rem / 150% 'Figtree-ExtraBold', sans-serif;
+}
+
+/* is this one faster as adding hover effect on each class separately? */
+.category,
+.title,
+.author {
+    &:hover {
+        color: var(--main-color);
+        cursor: pointer;
+    }
 }
 
 .avatar {
     margin-right: var(--alt-margin);
 }
 
-@media only screen and (min-width: 23.4375rem) and (max-width: 90rem) {
+@media only screen and (min-width: 23.4375rem) and (max-width: 67.5rem) {
+
     .card {
         width: 20.4375rem;
     }
