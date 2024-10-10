@@ -133,10 +133,13 @@ h6 {
   background-color: #333333;
   border-radius: .375rem;
 
-  &:hover {
+  &:hover,
+  &:active,
+  &:focus {
     cursor: pointer;
     background-color: var(--alt-and-hover-color);
     color: var(--card-background-color);
+    outline: none;
   }
 }
 
