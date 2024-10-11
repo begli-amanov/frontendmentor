@@ -78,102 +78,24 @@ h6 {
 /* Hosted fonts */
 
 @font-face {
-  font-family: 'Inter';
-  src: url(../fonts/Inter-VariableFont_opsz\,wght.ttf);
+  font-family: 'Outfit';
+  src: url('../fonts/Outfit-VariableFont_wght.ttf');
+}
+
+@font-face {
+  font-family: 'Young';
+  src: url('../fonts/YoungSerif-Regular.ttf');
 }
 
 /* Variables */
 
 :root {
-  --card-background-color: #1f1f1f;
-  --card-anchor-color: #333;
-  --card-main-text-color: #fff;
-  --alt-and-hover-color: #c5f82a;
+
+  font: 400 1rem/1.2 'Outfit', sans-serif;
 }
 
 /* Classes */
 
-.content-wrapper,
-.links,
-.card {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
-.content-wrapper {
-  background-color: #141414;
-  height: 100vh;
-  text-align: center;
-  font-family: 'Inter';
-}
-
-.card {
-  background-color: var(--card-background-color);
-  border-radius: .625rem;
-  color: var(--card-main-text-color);
-  gap: 1.5rem;
-  padding: 2rem 1.8rem;
-  max-width: fit-content;
-}
-
-.name,
-.card-link,
-.location {
-  font-weight: 600;
-}
-
-.card-link {
-  width: 100%;
-  color: var(--card-main-text-color);
-  font-size: .8125rem;
-  text-decoration: none;
-  padding: .6rem 5.3rem;
-  background-color: #333333;
-  border-radius: .375rem;
-
-  &:hover,
-  &:active,
-  &:focus {
-    cursor: pointer;
-    background-color: var(--alt-and-hover-color);
-    color: var(--card-background-color);
-    outline: none;
-  }
-}
-
-.links {
-  gap: .9rem;
-}
-
-.avatar {
-  border-radius: 50%;
-
-  &:hover {
-    cursor: pointer;
-  }
-}
-
-.note {
-  font-size: .8125rem;
-}
-
-.location {
-  font-size: .875rem;
-  color: var(--alt-and-hover-color);
-}
-
 /* Media queries start */
 
-@media only screen and (min-width: 20rem) and (max-width: 48rem) {
-
-  .card {
-    padding: 1.4rem 1.1rem;
-  }
-
-  .card-link {
-    padding-left: 4.7rem;
-    padding-right: 4.7rem;
-  }
-}
+@media only screen and (min-width: 20rem) and (max-width: 48rem) {}
