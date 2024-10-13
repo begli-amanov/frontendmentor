@@ -61,6 +61,12 @@ h4,
 h5,
 h6 {
   overflow-wrap: break-word;
+  font-family: 'Young';
+  color: #854632;
+}
+
+h1 {
+  color: #302D2C;
 }
 
 /*
@@ -71,9 +77,11 @@ h6 {
   isolation: isolate;
 }
 
-/* ==========================================================================
+/* 
+==========================================================================
    Hosted Fonts
-========================================================================== */
+==========================================================================
+*/
 
 /* Hosted fonts */
 
@@ -90,12 +98,29 @@ h6 {
 /* Variables */
 
 :root {
-
   font: 400 1rem/1.2 'Outfit', sans-serif;
+  background-color: #F3E6D8;
+  height: 100vh;
 }
 
 /* Classes */
 
+.content-wrapper {
+  position: relative;
+  width: 60%;
+  top: 6.25rem;
+  margin-inline: auto;
+  background-color: #fff;
+  padding: 3rem;
+}
+
 /* Media queries start */
 
-@media only screen and (min-width: 20rem) and (max-width: 48rem) {}
+@media only screen and (min-width: 20rem) and (max-width: 48rem) {
+  .content-wrapper {
+    width: 100%;
+    position: static;
+    padding: 1.5rem;
+    font-weight: 400;
+  }
+}
