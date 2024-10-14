@@ -61,12 +61,23 @@ h4,
 h5,
 h6 {
   overflow-wrap: break-word;
-  font-family: 'Young';
-  color: #854632;
+  font-weight: 500;
 }
 
 h1 {
   color: #302D2C;
+  font-family: 'Young';
+}
+
+h3 {
+  color: #7B284F;
+  font-weight: 600;
+  margin-bottom: .625rem;
+}
+
+h2 {
+  color: #854632;
+  font-family: 'Young';
 }
 
 /*
@@ -82,6 +93,7 @@ h1 {
    Hosted Fonts
 ==========================================================================
 */
+
 
 /* Hosted fonts */
 
@@ -100,18 +112,86 @@ h1 {
 :root {
   font: 400 1rem/1.2 'Outfit', sans-serif;
   background-color: #F3E6D8;
-  height: 100vh;
+  --text-color: #5F574E;
 }
 
 /* Classes */
 
 .content-wrapper {
   position: relative;
-  width: 60%;
-  top: 6.25rem;
-  margin-inline: auto;
+  width: 50%;
   background-color: #fff;
   padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  border-radius: 1.5rem;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10rem;
+  margin-bottom: 10rem;
+}
+
+.description {
+  font-family: 'Outfit';
+  color: var(--text-color);
+}
+
+img {
+  border-radius: 1rem;
+}
+
+ul,
+ol {
+  padding-inline-start: 1.25rem;
+  font-size: .875rem;
+}
+
+li+li {
+  margin-top: .625rem;
+}
+
+.preparation {
+  background-color: #FFF5FA;
+  padding: 1.25rem;
+  border-radius: .625rem;
+  font-size: .875rem;
+  color: var(--text-color);
+}
+
+.nutrition-table {
+  display: table;
+  text-align: left;
+  font-size: .875rem;
+  color: var(--text-color);
+}
+
+/* without this rule it will be not possible to set borders for the entire tr (row) but for each individual cell separately */
+table {
+  border-collapse: collapse;
+}
+
+td {
+  padding-left: 1rem;
+  padding-right: 1rem;
+
+  padding-top: .5rem;
+  padding-bottom: .5rem;
+}
+
+tr:not(:last-child) {
+  border-bottom: .0625rem solid rgba(156, 153, 153, .4);
+}
+
+hr {
+  color: #9c9999;
+  opacity: .4;
+}
+
+.left-aligned-cell {
+  text-align: left;
+  font-weight: 700;
+  color: #854632;
 }
 
 /* Media queries start */
@@ -120,7 +200,18 @@ h1 {
   .content-wrapper {
     width: 100%;
     position: static;
-    padding: 1.5rem;
-    font-weight: 400;
+    padding: 1.7rem;
+    margin-top: 0;
+    margin-bottom: 0;
+    border-radius: 0;
+
+  }
+
+  img {
+    border-radius: 0;
   }
 }
+
+/* TODO: find out why setting parent element to 100vh ignores bottom margin */
+
+/** FIX: how to move markers of a list item by side from text or other way around without making text behave unwished (not aligning each new line under the previous one) **/
