@@ -14,19 +14,23 @@
 		<link rel="stylesheet" href="styles/main.css" />
 	</head>
 	<body>
+		<!-- this image is hidden unless smaller screen sizes are used -->
 		<img
 			src="./assets/images/image-omelette.jpeg"
 			alt="Am image of an omelette with basilica on a white plate."
 			class="mobile-img"
 		/>
-		<main>
-			<!-- work with mobile first approach -->
-			<section class="content-wrapper">
+
+		<div class="content-wrapper">
+			<header role="banner">
 				<img
 					src="./assets/images/image-omelette.jpeg"
 					alt="Am image of an omelette with basilica on a white plate."
 				/>
 				<h1>Simple Omelette Recipe</h1>
+			</header>
+
+			<main class="recipes-info">
 				<p class="description">
 					An easy and quick dish, perfect for any meal. This classic omelette
 					combines beaten eggs cooked to perfection, optionally filled with your
@@ -34,7 +38,9 @@
 				</p>
 
 				<div class="preparation">
-					<h3>Preparation time</h3>
+					<span class="preparation-label"
+						><strong>Preparation time</strong>
+					</span>
 					<ul>
 						<li><strong>Total:</strong> Approximately 10 minutes</li>
 						<li><strong>Preparation:</strong> 5 minutes</li>
@@ -118,7 +124,7 @@
 						<td class="left-aligned-cell">22g</td>
 					</tr>
 				</table>
-			</section>
-		</main>
+			</main>
+		</div>
 	</body>
 </html>

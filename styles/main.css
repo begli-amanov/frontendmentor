@@ -67,18 +67,13 @@ h6 {
 h1 {
   color: #302D2C;
   font-family: 'Young';
-  font-size: 2.2rem;
-}
-
-h3 {
-  color: #7B284F;
-  font-weight: var(--fw-700);
-  margin-bottom: .625rem;
+  font-size: 2.4rem;
 }
 
 h2 {
   color: var(--brown-text-color);
   font-family: 'Young';
+  font-size: 2rem;
 }
 
 /*
@@ -110,7 +105,7 @@ h2 {
 :root {
   --text-color: #5F574E;
   --brown-text-color: #854632;
-  --fw-700: 700;
+  --weight-700: 700;
 
   background-color: #F3E6D8;
   font: 400 1rem/1.2 'Outfit', sans-serif;
@@ -122,18 +117,23 @@ h2 {
   display: none;
 }
 
-.content-wrapper {
-  width: 50%;
-  background-color: #fff;
-  padding: 2.5rem;
+.content-wrapper,
+header,
+.recipes-info {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
+}
+
+.content-wrapper {
+  width: 60%;
+  background-color: #fff;
+  padding: 2.5rem;
   border-radius: 1.5rem;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 10rem;
-  margin-bottom: 10rem;
+  margin-top: 7.5rem;
+  margin-bottom: 7.5rem;
   color: var(--text-color);
 }
 
@@ -143,15 +143,21 @@ h2 {
   border-radius: .625rem;
 }
 
+.preparation-label {
+  display: block;
+  font-size: 1.125rem;
+  color: #7B284F;
+  margin-bottom: .625rem;
+}
+
 .nutrition-table {
   display: table;
   text-align: left;
 }
 
 .left-aligned-cell {
-  font-weight: var(--fw-700);
+  font-weight: var(--weight-700);
   color: var(--brown-text-color);
-  padding-left: 0;
   padding-right: 1.5rem;
 }
 
@@ -187,7 +193,7 @@ li+li {
 /* style for bullet points and digits of the list items */
 li::marker {
   font-family: unset;
-  font-weight: var(--fw-700);
+  font-weight: var(--weight-700);
   color: var(--brown-text-color);
   font-size: .75rem;
 }
@@ -213,7 +219,7 @@ tr:not(:last-child) {
   border-bottom: .0625rem solid rgba(156, 153, 153, .4);
 }
 
-/* HORIZONTAL RULER */
+/* HORIZONTAL RULE */
 
 hr {
   color: #9c9999;
@@ -262,7 +268,7 @@ hr {
   }
 }
 
-/* TODO: find out why setting  arent element to 100vh ignores bottom margin of the child element */
+/* TODO: find out why setting  parent element to 100vh ignores bottom margin of the child element */
 
 /* FIX: how to move markers of a list item by side from text or other way around without making text behave unwished (not aligning each new line under the previous one) 
 
