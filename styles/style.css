@@ -1,0 +1,163 @@
+/* ==========================================================================
+   Modern CSS resets: https://www.joshwcomeau.com/css/custom-css-reset/
+   ==========================================================================
+*/
+
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*,
+*::before,
+*::after {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+/*
+    2. Remove default margin
+  */
+* {
+    margin: 0;
+}
+
+/*
+    Typographic tweaks!
+    3. Add accessible line-height
+    4. Improve text rendering
+  */
+body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+}
+
+/*
+    5. Improve media defaults
+  */
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+    max-width: 100%;
+}
+
+/*
+    6. Remove built-in form typography styles
+  */
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+/*
+    7. Avoid text overflows
+  */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    overflow-wrap: break-word;
+}
+
+/*
+    8. Create a root stacking context
+  */
+#root,
+#__next {
+    isolation: isolate;
+}
+
+@font-face {
+    font-family: "Outfit";
+    src: url("../assets/Outfit-Regular.woff2");
+}
+
+@font-face {
+    font-family: "Outfit-Bold";
+    src: url("../assets/Outfit-Bold.woff2");
+}
+
+/* Variables */
+
+:root {
+    --page-background: hsl(212, 45%, 89%);
+    --paragraph-font: 400 .9375rem/140% "Outfit", sans-serif;
+    --strong-font: 700 1.375rem/120% "Outfit-Bold", sans-serif;
+    --card-brd-radius: 1.25rem;
+    --img-brd-radius: .625rem;
+    --card-padding: 1rem 1rem 2.5rem 1rem;
+    --card-background: #fff;
+    --img-margin: 1.5rem;
+
+    background-color: var(--page-background);
+}
+
+/* Classes */
+
+.content {
+    /* need to mention in MD retrospective that i did not get it center right away */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.card {
+    padding: var(--card-padding);
+    background-color: var(--card-background);
+    border-radius: var(--card-brd-radius);
+    font: var(--paragraph-font);
+    box-shadow: 0 1.5625rem 1.5625rem 0 rgb(0 0 0 / 4.77%);
+}
+
+.paragraphs {
+    padding: 0 1rem;
+    text-align: center;
+    letter-spacing: .0125rem;
+    max-width: 18rem;
+}
+
+.strong {
+    font: var(--strong-font);
+    letter-spacing: 0;
+    vertical-align: top;
+    margin-bottom: 1rem;
+    color: #1f314f;
+}
+
+.attribution {
+    text-align: center;
+    font: var(--paragraph-font);
+}
+
+/* Elements */
+
+p {
+    margin: 0;
+    color: #68778d;
+}
+
+img {
+    width: 18rem;
+    height: 18rem;
+    border-radius: var(--img-brd-radius);
+    margin-bottom: var(--img-margin);
+}
+
+a {
+    text-decoration: none;
+    font-weight: bold;
+    transition: all .15s linear;
+    color: #0087cc;
+
+    &:hover {
+        color: #ff7b29;
+    }
+}
